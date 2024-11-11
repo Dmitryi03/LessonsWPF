@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,8 @@ namespace LessonsWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -30,6 +33,32 @@ namespace LessonsWPF
             windows2 windows = new windows2();
             windows.Show();
             this.Close();
+
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Приложение закрылось");
+            Application.Current.Shutdown();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog {Filter = "Image Files| *.jpg; *.jpeg; *.png; *.gif; *.bpm;"};
+
+            if(openFileDialog.ShowDialog() == true)
+            {
+                BitmapImage bitmapImage = new BitmapImage(new Uri(openFileDialog.FileName));
+
+                DisplayImage.Source = bitmapImage;
+            }
+        }
+
+        private void Button_me_Click(object sender, RoutedEventArgs e)
+        {
+            TextBoxMy.Text = "Текст добавлен";
+
+            Text_BLOCKS.Text = "Ещё текст добавлен";
         }
     }
 }

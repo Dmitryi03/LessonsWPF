@@ -6,8 +6,59 @@
         xmlns:local="clr-namespace:LessonsWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
-        <Button Content="Далее" HorizontalAlignment="Left" VerticalAlignment="Top" Width="179" Margin="300,150,0,0" Height="92" Click="Button_Click"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                <GradientStop Color="#FF6AB4FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Menu Height="25" VerticalAlignment="Top">
+            <Menu.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FF464242" Offset="1"/>
+                </LinearGradientBrush>
+            </Menu.Background>
+            <MenuItem Header="Файл" Height="25" Click="MenuItem_Click">
+                <MenuItem.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5D5D5D" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </MenuItem.Background>
+                <MenuItem.Icon>
+                    <Image Height="20" Source="\\sysprofiles.adm.vvsu.ru\STUDENTRPROFILES$\surovtsev03\Downloads\snowman.png"></Image>
+                </MenuItem.Icon>
+                <MenuItem Header="Открыть" Click="MenuItem_Click_1">
+
+                </MenuItem>
+                <MenuItem Header="Сохранить"></MenuItem>
+                <Separator/>
+                <MenuItem Header="Выйти" Click="MenuItem_Click" ></MenuItem>
+            </MenuItem>
+
+        </Menu>
+        <Button Content="Далее" HorizontalAlignment="Left" VerticalAlignment="Top" Width="179" Margin="300,270,0,0" Height="92" Click="Button_Click" FontWeight="Bold" FontFamily="Times New Roman">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB0B0B0" Offset="0"/>
+                    <GradientStop Color="#FF9E9E9E" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Image Name="DisplayImage" HorizontalAlignment="Left" Height="238" Margin="67,99,0,0" VerticalAlignment="Top" Width="358"/>
+        <TextBox Name="TextBoxMy" FontSize="24" HorizontalAlignment="Left" Height="46" Margin="67,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" FontFamily="Times New Roman" FontWeight="Bold">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEEEEEE" Offset="0"/>
+                    <GradientStop Color="#FF3CA8D1" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBlock Name="Text_BLOCKS" FontSize="24" HorizontalAlignment="Left" Margin="506,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button FontSize="16" Name="button_me" Content="Нажми на меня!" HorizontalAlignment="Left" Margin="91,278,0,0" VerticalAlignment="Top" Width="127" Height="73" Click="Button_me_Click"/>
 
     </Grid>
 </Window>
